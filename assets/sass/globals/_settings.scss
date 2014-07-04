@@ -1,0 +1,88 @@
+/* ==========================================================================
+	Settings
+============================================================================= */	
+
+/* Define Media Queries - http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/ */
+// Use: @include bp-s {};
+
+@mixin bp-s {
+    @media only screen and (min-width: 30em) { @content; } // 480px
+    }
+
+@mixin bp-m {
+    @media only screen and (min-width: 37.5em) { @content; } // 600px
+    }
+
+@mixin bp-l {
+    @media only screen and (min-width: 47.9375em) { @content; } // 767px
+    }
+
+@mixin bp-xl {
+    @media only screen and (min-width: 59.375em) { @content; } // 959px
+    }
+
+@mixin bp-xxl {
+    @media only screen and (min-width: 78.75em) { @content; } // 1260px
+    }
+
+
+/* Clearfix http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/ */
+// Use: @extend %clearfix;
+%clearfix {
+    *zoom: 1;
+
+    &:before {
+        content: " ";
+        display: table;
+        }
+
+    &:after {
+        content: " ";
+        display: table;
+        clear: both;
+        }
+    }
+
+/* Visually hide element http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/ */
+// Use: @extend %visuallyhidden;
+%visuallyhidden {
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+    }
+
+// CSS Image Replacement
+%ir {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+/* Reset --------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0; 
+  vertical-align: baseline; 
+  background: transparent;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, 
+blockquote:after, 
+q:before, 
+q:after {
+  content: '';
+  content: none;
+}
+:focus {
+  outline: 0;
+}
