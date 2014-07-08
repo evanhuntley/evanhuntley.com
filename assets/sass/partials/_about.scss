@@ -6,7 +6,12 @@
 	@extend %clearfix;
 	
 	figure {
-		float: right;
+		margin: 1em 0;
+		
+		@include bp-m {
+			float: right;
+			margin: 1em 40px;
+		}
 		
 		img {
 			max-width: 300px;

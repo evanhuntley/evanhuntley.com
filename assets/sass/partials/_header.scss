@@ -11,7 +11,7 @@ header {
 	@extend %clearfix;
 	
 	@include bp-m {
-		padding: 1em 0 8em;
+		padding: 1em 1em 8em;
 	}
 	
 	@include bp-l {

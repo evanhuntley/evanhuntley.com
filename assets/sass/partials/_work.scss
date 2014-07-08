@@ -6,6 +6,10 @@
 	background: rgb(232, 243, 245);
 	@extend %clearfix;
 	
+	ul {
+		list-style-type: none;
+	}
+	
 	.portfolio-item {
 		margin: 0 0 1.25em;
 		padding: 1em;
