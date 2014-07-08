@@ -3,17 +3,31 @@
 ============================================================================= */	
 
 header {
-	padding: 1em 0 8em;
-	background: url('../img/bg_header.png');
+	padding: 1em;
+	background: url('../img/bg_header-small.png');
 	background-size: 100% auto;
 	background-repeat: no-repeat;
-	
+	background-attachment: fixed;
 	@extend %clearfix;
+	
+	@include bp-m {
+		padding: 1em 0 8em;
+	}
+	
+	@include bp-l {
+		background: url('../img/bg_header.png');
+		background-size: 100% auto;
+		background-attachment: fixed;	
+	}
+	
+	@include bp-xl {
+		background-position: 0 -210px;			
+	}
 	
 	.logo {
 		float: left;
-		width: 150px;
-		height: 150px;
+		width: 80px;
+		height: 80px;
 		background: url('../img/eh-logo.png') no-repeat;
 		background-size: 80px 80px;
 		@extend %ir;
@@ -22,12 +36,47 @@ header {
 	.hero {
 		float: left;
 		width: 100%;
+		margin: 3em 0 2em;
 		text-align: center;
 		color: rgba(255, 255, 255, .9);
 		@extend %clearfix;
 		
+		@include bp-m {
+			margin: 6em 0 0;
+		}
+		
 		h1 {
-			font-size: 6em;
+		
+			@include bp-m {
+				font-size: 6em;				
+			}
+			
+			span {
+				position: relative;
+				transition: all .2s;
+				
+				&:first-child {
+					right: 0;
+				}
+				
+				&:last-child {
+					left: 0;
+				}
+			}
+			
+			&:hover {
+				
+				span {
+					
+					&:first-child {
+						right: .25em;
+					}
+					
+					&:last-child {
+						left: .25em;
+					}
+				}
+			}
 		}
 		
 		p {
@@ -43,7 +92,10 @@ header {
 
 nav {
 	float: right;
-	margin: 1.5em 0 0;
+	
+	@include bp-m {
+		margin: 1.5em 0 0;
+	}
 	
 	ul {
 		margin: 0;
@@ -51,8 +103,12 @@ nav {
 	}
 	
 	li {
-		float: left;
-		margin: 0 1em;
+		text-align: right;
+		
+		@include bp-m {
+			margin: 0 1em;
+			float: left;
+		}
 		
 		&:last-child {
 			margin-right: 0;
