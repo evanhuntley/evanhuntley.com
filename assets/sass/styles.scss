@@ -8,14 +8,16 @@ Version: 1.0
 
 @import
 	
+	//Vendor
+	"vendor/normalize",	
+	
 	//Globals
 	"globals/settings",
-	
-
-	//Vendor
-	"vendor/normalize.css";
+	"globals/general",
+	"globals/layout",
 	
 	//Partials
-	
+	"partials/header",
+	"partials/work";
 	
 	//Modules

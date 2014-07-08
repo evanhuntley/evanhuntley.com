@@ -1,0 +1,46 @@
+/* ==========================================================================
+	Typography
+============================================================================= */	
+
+@import url(http://fonts.googleapis.com/css?family=Oswald:300,700,400);
+@import url(http://fonts.googleapis.com/css?family=Muli:300,300italic);
+
+body {
+	font: 1em/1.6em "Muli", Arial, sans-serif;
+	color: #000;
+	color: rgba(0, 0, 0, .85);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Oswald", Arial, sans-serif;
+	line-height: 1.2em;
+}
+
+h1 {
+	text-transform: uppercase;
+	font-size: 3em;
+	font-weight: 300;
+}
+
+section {
+	padding: 3em 0;
+	
+	h2 {
+		margin: 0 0 .5em;
+		font-size: 2.5em;
+		font-weight: 300;
+		text-transform: uppercase;
+		color: #2c333b;
+	}
+	
+}
+
+/* ==========================================================================
+	Media
+============================================================================= */	
+
+img {
+	width: 100%;
+	height: auto;
+	max-width: 100%;
+}

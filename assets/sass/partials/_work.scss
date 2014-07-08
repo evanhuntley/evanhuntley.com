@@ -1,0 +1,39 @@
+/* ==========================================================================
+	Work
+============================================================================= */	
+
+.work {
+	background: rgb(232, 243, 245);
+	@extend %clearfix;
+	
+	.portfolio-item {
+		margin: 0 0 1.25em;
+		padding: 1em;
+		background: rgba(255, 255, 255, 0.6);
+		
+		@include bp-l {
+			float: left;
+			width: 49%;
+			
+			&:nth-child(odd) {
+				margin-right: 2%;
+			}
+		}	
+		
+		figure {
+			margin: 0;
+			
+			img {
+				border: 1px solid #f1f1f1;
+			}
+		}
+		
+		h3 {
+			margin: .5em 0 0;
+			font-size: 1.5em;
+			font-weight: 400;
+		}
+		
+	}
+	
+}

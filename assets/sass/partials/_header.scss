@@ -1,0 +1,69 @@
+/* ==========================================================================
+	Header
+============================================================================= */	
+
+header {
+	padding: 1em 0 8em;
+	background: url('../img/bg_header.png');
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	
+	@extend %clearfix;
+	
+	.logo {
+		float: left;
+		width: 150px;
+		height: 150px;
+		background: url('../img/eh-logo.png') no-repeat;
+		background-size: 80px 80px;
+		@extend %ir;
+	}	
+
+	.hero {
+		float: left;
+		width: 100%;
+		text-align: center;
+		color: rgba(255, 255, 255, .9);
+		@extend %clearfix;
+		
+		h1 {
+			font-size: 6em;
+		}
+		
+		p {
+			font-size: 1.2em;
+		}
+		
+	}
+
+}
+
+
+/* Navigation ---------------------------------------------------- */
+
+nav {
+	float: right;
+	margin: 1.5em 0 0;
+	
+	ul {
+		margin: 0;
+		list-style-type: none;
+	}
+	
+	li {
+		float: left;
+		margin: 0 1em;
+		
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	
+	a { 
+		font-weight: 700;
+		color: #fff;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+	
+}
