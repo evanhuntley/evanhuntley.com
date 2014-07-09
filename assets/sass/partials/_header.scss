@@ -4,7 +4,7 @@
 
 header {
 	padding: 1em;
-	background: url('../img/bg_header-small.png');
+	background: url('../img/bg_header-small.jpg');
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -15,7 +15,7 @@ header {
 	}
 	
 	@include bp-l {
-		background: url('../img/bg_header.png');
+		background: url('../img/bg_header.jpg');
 		background-size: 100% auto;
 		background-attachment: fixed;	
 	}
