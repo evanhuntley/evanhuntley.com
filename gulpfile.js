@@ -10,21 +10,41 @@ var gulp = require('gulp');
 	    clean = require('gulp-clean'),
 	    rename = require('gulp-rename');
 	    livereload = require('gulp-livereload');
+	    uglify = require('gulp-uglify');
+	    imagemin = require('gulp-imagemin');
     
 	// Paths
-	var path = {
-		scss: 'assets/sass/**/*.scss'
+	var paths = {
+		scss: 'assets/sass/**/*.scss',
+		scripts: 'assets/js/**/*.js',
+		images: 'assets/img/*'
 	};    
     
 	// CSS
 	gulp.task('styles', function() {
-		return gulp.src(path.scss)
+		return gulp.src(paths.scss)
 			.pipe(sass({ style: 'expanded' }))
 			.pipe(autoprefixer('last 1 version'))
 			.pipe(minifycss())
 			.pipe(rename({suffix: '.min'}))
 			.pipe(gulp.dest('assets/css'))
 			.pipe(notify({ message: 'Styles compiled! Righteous!' }));
+	});
+	
+	// JS
+	gulp.task('scripts', function() {
+		return gulp.src('assets/js/scripts.js')
+	    .pipe(uglify())
+	    .pipe(rename({suffix: '.min'}))
+	    .pipe(gulp.dest('assets/js'))
+		.pipe(notify({ message: 'Scripts uglified!' }));
+	});
+	
+	// Images
+	gulp.task('images', function() {
+		return gulp.src(paths.images)
+		.pipe(imagemin())
+		.pipe(gulp.dest('assets/img'));
 	});
 	
 	//Clean
@@ -42,7 +62,13 @@ var gulp = require('gulp');
 	gulp.task('watch', function() {
 		
 		// Watch .scss files
-		gulp.watch(path.scss, ['styles']);
+		gulp.watch(paths.scss, ['styles']);
+		
+		//Watch .js files
+		gulp.watch (paths.scripts, ['scripts']);
+		
+		//Watch img files
+		gulp.watch (paths.images, ['images']);
 		
 	});
 	
