@@ -26,7 +26,6 @@ var gulp = require('gulp');
 			.pipe(sass({ style: 'expanded' }))
 			.pipe(autoprefixer('last 1 version'))
 			.pipe(minifycss())
-			.pipe(rename({suffix: '.min'}))
 			.pipe(gulp.dest('assets/css'))
 			.pipe(notify({ message: 'Styles compiled! Righteous!' }));
 	});
