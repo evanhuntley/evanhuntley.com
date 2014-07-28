@@ -3,25 +3,25 @@
 ============================================================================= */	
 
 header {
-	padding: 1em;
-	background: url('../img/bg_header-small.jpg');
+	padding: 1em 1em 5em;
+	background: url('../img/bg_raleigh-small.jpg');
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	@extend %clearfix;
 	
 	@include bp-m {
-		padding: 1em 1em 8em;
+		padding: 1em 1em 13em;
 	}
 	
 	@include bp-l {
-		background: url('../img/bg_header.jpg');
+		background: url('../img/bg_raleigh.jpg');
 		background-size: 100% auto;
-		background-attachment: fixed;	
+		background-attachment: fixed;		
 	}
 	
 	@include bp-xl {
-		background-position: 0 -210px;			
+		background-position: 0 -150px;
 	}
 	
 	.logo {
@@ -49,33 +49,6 @@ header {
 		
 			@include bp-m {
 				font-size: 6em;				
-			}
-			
-			span {
-				position: relative;
-				transition: all .2s;
-				
-				&:first-child {
-					right: 0;
-				}
-				
-				&:last-child {
-					left: 0;
-				}
-			}
-			
-			&:hover {
-				
-				span {
-					
-					&:first-child {
-						right: .25em;
-					}
-					
-					&:last-child {
-						left: .25em;
-					}
-				}
 			}
 		}
 		

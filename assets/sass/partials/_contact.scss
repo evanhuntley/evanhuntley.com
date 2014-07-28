@@ -3,7 +3,33 @@
 ============================================================================= */	
 
 .contact {
+	position: relative;
+	padding: 10em 1em 2em;
+	background: url('../img/bg_contact-small.jpg');
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center bottom;
 	text-align: center;
+	
+	@include bp-l {
+		padding: 12em 0 8em;
+		background-image: url('../img/bg_contact.jpg');
+	}
+	
+	h2 {
+		font-size: 2em;
+		color: #fff;
+		
+		@include bp-l {
+			font-size: 3em;
+		}
+	}
+	
+	p {
+		font-size: 1.2em;
+		color: #fff;	
+	}
 	
 	.social {
 		margin: 2em 0;
@@ -17,17 +43,12 @@
 		a {
 			font-size: 2em;
 			text-decoration: none;
-			color: rgba(51,51,51,0.3);
 			transition: all .2s;
+			color: #fff;
 			
 			@include bp-m {
 				font-size: 3em;
 			}
-			
-			&:hover {
-				color: #333;
-			}
 		}
-	}
-	
+	}	
 }

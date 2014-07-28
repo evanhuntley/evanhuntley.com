@@ -4,7 +4,22 @@
 
 .about {
 	@extend %clearfix;
+	position: relative;
+	top: -75px;
+	margin-bottom: -180px;
+	background: #fff;
+	z-index: 3;
+	transform: skewY(-3deg);
 	
+	@include bp-l {
+		top: -50px;
+		margin-bottom: -90px;
+	}
+	
+	.container {
+		transform: skewY(3deg);
+	}
+		
 	figure {
 		margin: 1em 0;
 		

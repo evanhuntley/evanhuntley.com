@@ -3,8 +3,21 @@
 ============================================================================= */	
 
 .work {
-	background: rgb(232, 243, 245);
 	@extend %clearfix;
+	position: relative;
+	top: -75px;
+	padding: 2em 1em;
+	background: rgb(232, 243, 245);
+	z-index: 4;
+	transform: skewY(-3deg);
+	
+	@include bp-l {
+		padding: 4em 0 5em;
+	}
+	
+	.container {
+		transform: skewY(3deg);
+	}
 	
 	ul {
 		list-style-type: none;
