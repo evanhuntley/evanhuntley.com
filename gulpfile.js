@@ -17,7 +17,7 @@ var gulp = require('gulp');
 	var paths = {
 		scss: 'assets/sass/**/*.scss',
 		scripts: 'assets/js/**/*.js',
-		images: 'assets/img/*'
+		images: 'assets/img/**'
 	};    
     
 	// CSS
@@ -43,7 +43,7 @@ var gulp = require('gulp');
 	gulp.task('images', function() {
 		return gulp.src(paths.images)
 		.pipe(imagemin())
-		.pipe(gulp.dest('assets/img'));
+		.pipe(gulp.dest('assets/css'));
 	});
 	
 	//Clean
