@@ -9,15 +9,10 @@
 	margin-bottom: -210px;
 	background: #fff;
 	z-index: 3;
-	transform: skewY(-3deg);
 	
 	@include bp-l {
 		top: -50px;
 		margin-bottom: -90px;
-	}
-	
-	.container {
-		transform: skewY(3deg);
 	}
 		
 	figure {
